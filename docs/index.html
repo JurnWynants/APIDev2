@@ -153,7 +153,8 @@
         try {
             const response = await fetch(`https://system-service-jurnwynants.cloud.okteto.net/users/${this.userId}`);
             if (response.ok) {
-                this.responsedata = await response.json();
+                const data = await response.json();
+                this.responsedata = data;
             } else {
                 console.error('User not found');
                 // Handle error message or display feedback to the user
@@ -177,6 +178,7 @@
         <!-- Display other user details as needed -->
     </template>
 </div>
+
 
 
 
