@@ -32,4 +32,4 @@ Deze FastAPI-app biedt een API voor het beheren van gebruikers en boeken. Het is
 ### Delete a book
 ![DELETE book postman screenshot](/assets/images/deleteBook.png)
 ### Change user data
-![CHANGE user data postman screenshot](/assets/images/changeUser)
+![CHANGE user data postman screenshot](/assets/images/changeUser.png)
