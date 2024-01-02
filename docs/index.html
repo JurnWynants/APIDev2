@@ -181,7 +181,7 @@
     <button x-on:click="getUserData">Get User</button>
 
      <template x-if="responsedata !== null">
-    <h2>User Details</h2>
+         <div>
     <div x-text="'User ID: ' + responsedata.id"></div>
     <div x-text="'Email: ' + responsedata.email"></div>
 
@@ -202,6 +202,7 @@
             <li>No books found for this user.</li>
         </template>
     </ul>
+             </div>
 </template>
 
 </div>
