@@ -26,7 +26,7 @@ app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 origins = [
-    "https://65940e357406b30cb8077dea--zesty-marzipan-f4f3ab.netlify.app",
+    "https://main--jolly-stroopwafel-5ddde3.netlify.app/",
     "https://system-service-jurnwynants.cloud.okteto.net",
 ]
 
