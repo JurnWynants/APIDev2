@@ -1,7 +1,7 @@
 # APIdev Jurn Wynants
 # Mijn FastAPI Thema: Bib
 
-Deze FastAPI-app biedt een API voor het beheren van gebruikers en boeken. Het is beveiligd met OAuth, password hashing, heeft een simpele frontend en wordt gehost op [https://system-service-jurnwynants.cloud.okteto.net](https://system-service-jurnwynants.cloud.okteto.net). Frontend: [https://jurnwynants.github.io/APIdev/](https://jurnwynants.github.io/APIdev/)
+Deze FastAPI-app biedt een API voor het beheren van gebruikers en boeken. Het is beveiligd met OAuth, password hashing, heeft een simpele frontend en wordt gehost op [https://system-service-jurnwynants.cloud.okteto.net](https://system-service-jurnwynants.cloud.okteto.net). Frontend: [[https://jurnwynants.github.io/APIdev/](https://jurnwynants.github.io/APIdev/](https://main--jolly-stroopwafel-5ddde3.netlify.app/))
 
 
 
