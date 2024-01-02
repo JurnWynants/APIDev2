@@ -23,10 +23,8 @@ print("Tables created.......")
 app = FastAPI()
 
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
 origins = [
-    "*"
+    "https://jurnwynants.github.io"
 ]
 
 app.add_middleware(
@@ -36,6 +34,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Dependency
 def get_db():
