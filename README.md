@@ -10,6 +10,7 @@ Deze FastAPI-app biedt een API voor het beheren van gebruikers en boeken. Het is
 - Toevoegen van boeken aan gebruikers
 - Verwijderen van gebruikers
 - verwijderen van boeken
+- Gebruikersgegeven veranderen
 
 ## openAPI docs
 
