@@ -152,3 +152,31 @@ def test_delete_user_endpoint():
     assert 'books' in deleted_user
     assert 'is_active' in deleted_user
 
+def test_update_user_endpoint():
+    user_data = {
+        "email": "testupdate@test.be",
+        "password": "testpasswordupdate",
+    }
+
+    response = requests.post('http://127.0.0.1:8000/users/', json=user_data)
+    assert response.status_code == 200
+    created_user = response.json()
+    assert created_user['email'] == user_data['email']
+    assert 'id' in created_user
+
+
+    user_id = created_user['id']
+
+
+    updated_email = "updatedemail@test.be"
+    update_user_data = {
+        "email": updated_email,
+        "password": "newpassword",
+    }
+
+    update_response = requests.put(f'http://127.0.0.1:8000/users/{user_id}', json=update_user_data)
+    assert update_response.status_code == 200
+
+    updated_user = update_response.json()
+    assert updated_user['email'] == updated_email
+    assert updated_user['id'] == user_id
