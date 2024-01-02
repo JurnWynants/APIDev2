@@ -104,6 +104,8 @@ def delete_book(book_id: int, db: Session = Depends(get_db), token: str = Depend
     return db_book
 
 
+
+
 @app.post("/token")
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     #Try to authenticate the user
@@ -120,3 +122,18 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
     )
     #Return the JWT as a bearer token to be placed in the headers
     return {"access_token": access_token, "token_type": "bearer"}
+
+@app.put("/users/{user_id}", response_model=schemas.User)
+def update_user(user_id: int, user_update: schemas.UserCreate, db: Session = Depends(get_db)):
+    db_user = crud.get_user(db, user_id=user_id)
+    if db_user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    updated_data = user_update.dict(exclude_unset=True)
+    for key, value in updated_data.items():
+        setattr(db_user, key, value)
+
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user
