@@ -26,11 +26,8 @@ app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 origins = [
-    "https://main--jolly-stroopwafel-5ddde3.netlify.app/",
-    "https://system-service-jurnwynants.cloud.okteto.net",
-    "https://jurnwynants.github.io/"
+    "*"
 ]
-
 
 app.add_middleware(
     CORSMiddleware,
