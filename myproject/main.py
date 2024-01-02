@@ -26,7 +26,7 @@ app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 origins = [
-    "*"
+    "https://main--jolly-stroopwafel-5ddde3.netlify.app"
 ]
 
 app.add_middleware(
