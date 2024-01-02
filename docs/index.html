@@ -181,20 +181,29 @@
     <button x-on:click="getUserData">Get User</button>
 
      <template x-if="responsedata !== null">
-        <h2>User Details</h2>
-        <p>User ID: <strong x-text="responsedata.id"></strong></p>
-        <p>Email: <strong x-text="responsedata.email"></strong></p>
+    <h2>User Details</h2>
+    <div x-text="'User ID: ' + responsedata.id"></div>
+    <div x-text="'Email: ' + responsedata.email"></div>
 
-        <h3>Books</h3>
-        <ul>
+    <h3>Books</h3>
+    <ul>
+        <template x-if="responsedata.books.length > 0">
             <template x-for="book in responsedata.books" :key="book.id">
                 <li>
                     <strong>Book ID:</strong> <span x-text="book.id"></span><br>
                     <strong>Title:</strong> <span x-text="book.title"></span><br>
+                    <strong>Description:</strong> <span x-text="book.description"></span><br>
+                    <strong>Release Year:</strong> <span x-text="book.releaseyear"></span><br>
+                    <!-- Display other book details as needed -->
                 </li>
             </template>
-        </ul>
-    </template>
+        </template>
+        <template x-if="responsedata.books.length === 0">
+            <li>No books found for this user.</li>
+        </template>
+    </ul>
+</template>
+
 </div>
 
 </body>
