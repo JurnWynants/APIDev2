@@ -6,7 +6,7 @@ psycopg2-binary>=2.8,<3.0
 passlib[bcrypt,argon2]
 argon2_cffi
 social-auth-core[openidconnect]
+social-auth-core[openidconnect]>=4.5.1
 python-jose>=3.0.0
 requests>=2.9.1
-pytest
-json
+pytest>=7.4.4
