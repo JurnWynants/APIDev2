@@ -24,8 +24,9 @@ app = FastAPI()
 
 
 origins = [
-    "https://jurnwynants.github.io",
-    "https://main--jolly-stroopwafel-5ddde3.netlify.app"
+    "https://main--jolly-stroopwafel-5ddde3.netlify.app",
+    "https://jurnwynants.github.io"
+
 ]
 
 app.add_middleware(
