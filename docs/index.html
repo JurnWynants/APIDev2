@@ -174,10 +174,10 @@
 
     <button x-on:click="getUserData">Get User</button>
 
-    <template x-if="responsedata">
+    <template x-for="user in responsedata" :key="user.id">
         <h2>User Details</h2>
-        <p>User ID: <strong x-text="responsedata.id"></strong></p>
-        <p>Email: <strong x-text="responsedata.email"></strong></p>
+        <p>User ID: <strong x-text="user.id"></strong></p>
+        <p>Email: <strong x-text="user.email"></strong></p>
         <!-- Display other user details as needed -->
     </template>
 </div>
